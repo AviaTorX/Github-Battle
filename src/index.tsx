@@ -1,15 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Hello} from './components/Hello';
+import {App} from './components/App';
 
-class App extends React.Component {
-    render(){
-        return(
-            <Hello compiler="Typescript" framework="React"></Hello>
-        )
-    }
-}
+// class App extends React.Component {
+//     render(){
+//         return(
+//             <Hello compiler="Typescript" framework="React"></Hello>
+//         )
+//     }
+// }
 
 ReactDOM.render(
     <App />,
