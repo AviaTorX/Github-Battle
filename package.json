@@ -7,7 +7,7 @@
     "start": "webpack-dev-server  --mode development --inline --hot --open --port 3000",
     "build": "webpack  --mode development",
     "prod_build": "SET NODE_ENV='production' & webpack -p",
-    "deploy": "npm run build & firebase deploy",
+    "deploy": "npm run prod_build & firebase deploy",
     "firebase-init": "firebase login & firebase init"
   },
   "author": "AviatorX",
