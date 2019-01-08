@@ -4,20 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server  --mode development --inline --hot --open",
-    "build": "webpack  --mode development"
+    "start": "webpack-dev-server  --mode development --inline --hot --open --port 3000",
+    "build": "webpack  --mode development",
+    "prod_build": "SET NODE_ENV='production' & webpack -p",
+    "deploy": "npm run build & firebase deploy",
+    "firebase-init": "firebase login & firebase init"
   },
   "author": "AviatorX",
   "license": "ISC",
   "dependencies": {
+    "@types/query-string": "^6.2.0",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "@types/react-router": "^4.4.3",
+    "@types/react-router-dom": "^4.3.1",
+    "axios": "^0.18.0",
+    "query-string": "^6.2.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.0",
+    "firebase-tools": "^6.2.2",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "typescript": "^3.2.2",
